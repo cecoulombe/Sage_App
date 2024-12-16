@@ -16,6 +16,8 @@ You can  downlaod the APK from:
 OR
 - Directly from this repository: Navigate to the [`apk/`](./apk/) folder and download the `sage_app.apk` file.
 
+---
+
 ## Running the App
 
 ## Features

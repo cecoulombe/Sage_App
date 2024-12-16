@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/layoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NetWorthCalculator">
+
+    <ImageView
+        android:id="@+id/stickerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="315"
+        android:translationY="15dp"
+        android:translationX="15dp"
+        app:layout_constraintTop_toTopOf="@id/stickerTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/stickerStart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/activitySelectionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_home"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+        <Button
+            android:id="@+id/accountManagerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/accountManagerButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/netWorthButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/disabled_activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/netWorthButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/goalTrackerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/goalTrackerButtonText"
+            android:maxLines="2"
+            />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_settings"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/showGraphButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_chart"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="2dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_question_mark"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toTopOf="@id/signOutButton"
+        app:layout_constraintBottom_toBottomOf="@id/signOutButton"
+        app:layout_constraintEnd_toStartOf="@id/signOutButton"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/signOutButton"
+        app:backgroundTint="@null"
+        android:text="@string/signOutButton"
+        android:maxLines="2"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--  Main content of the page's UI  -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--  Accounts which ARE assets  -->
+            <TextView
+                style="@style/labelsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accountAssetLabel" />
+            <ScrollView
+                android:id="@+id/assetAccountsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                style="@style/scrollViewStyle"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/assetAccountsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </ScrollView>
+            <!--  Assets which are NOT accounts  -->
+            <TextView
+                style="@style/labelsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/otherAssetsLabel" />
+            <ScrollView
+                android:id="@+id/assetsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="10dp">
+
+                <TableLayout
+                    android:id="@+id/assetsTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/tableLayoutStyle"
+                    android:stretchColumns="1" />
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/addAssetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/addAssetButton"
+                    app:backgroundTint="@null"
+                    android:text="@string/addAssetButton" />
+                <Button
+                    android:id="@+id/deleteAssetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/addAssetButton"
+                    app:backgroundTint="@null"
+                    android:text="@string/deleteAssetButton"
+                    android:maxLines="2"
+                    android:layout_marginHorizontal="15dp" />
+            </LinearLayout>
+            <!--  Accounts which ARE liabilities  -->
+            <TextView
+                style="@style/labelsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accountLiabilitiesLabel" />
+            <ScrollView
+                android:id="@+id/liabilityAccountsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                style="@style/scrollViewStyle"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/liabilityAccountsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </ScrollView>
+            <!--  Liabilities which are NOT accounts  -->
+            <TextView
+                style="@style/labelsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/otherLiabilitiesLabel" />
+            <ScrollView
+                android:id="@+id/liabilitiesScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="10dp">
+
+                <TableLayout
+                    android:id="@+id/liabilitiesTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/tableLayoutStyle"
+                    android:stretchColumns="1" />
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/addLiabilityButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/addAssetButton"
+                    app:backgroundTint="@null"
+                    android:text="@string/addLiabilityButton" />
+                <Button
+                    android:id="@+id/deleteLiabilityButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/addAssetButton"
+                    app:backgroundTint="@null"
+                    android:text="@string/deleteLiabilityButton"
+                    android:maxLines="2"
+                    android:layout_marginHorizontal="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/netWorthDisplayTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/displayDefault"
+        style="@style/netWorthDisplay"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintBottom_toBottomOf="@id/signOutButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalEndOfDisplay"/>
+
+    <ImageButton
+        android:id="@+id/currencyExchangeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_currency_exchange"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/currencyExchangeDescription"
+        app:layout_constraintTop_toBottomOf="@id/activitySelectionLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEndOfDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

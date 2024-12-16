@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColor">#E6EDE6</color>
+    <color name="titleColor">#D5DCD4</color>
+    <color name="textAccentColor">#F4E2A8</color>
+    <color name="backgroundColor">#1D241D</color>
+    <color name="headerBackground">#4C624C</color>
+    <color name="mainMenuButtonStartPressed">#1A1A1A</color>
+    <color name="mainMenuButtonEndPressed">#000000</color>
+    <color name="mainMenuButtonStartDisabled">#5BA044</color>
+    <color name="mainMenuButtonEndDisabled">#29451F</color>
+    <color name="mainMenuButtonStartDefault">#5C5C5C</color>
+    <color name="mainMenuButtonEndDefault">#3A3A3A</color>
+    <color name="tableLayoutBackground">#364336</color>
+    <color name="scrollBackgroundColor">#415041</color>
+    <color name="netPositive">#3DA638</color>
+    <color name="netNegative">#BC4343</color>
+</resources>

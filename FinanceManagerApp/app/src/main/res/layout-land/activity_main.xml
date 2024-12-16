@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/layoutStyle"
+    tools:context=".MainActivity">
+
+    <!-- Sticker ImageView -->
+    <ImageView
+        android:id="@+id/stickerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="225"
+        android:translationY="-15dp"
+        android:translationX="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/stickerTopLeftBottom"
+        app:layout_constraintStart_toStartOf="@id/stickerTopLeftStart"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <ImageView
+        android:id="@+id/stickerImage2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="75"
+        android:scaleX="-1"
+        android:translationY="15dp"
+        android:translationX="-15dp"
+        app:layout_constraintTop_toTopOf="@id/stickerBotLeftTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/stickerBotLeftEnd"/>
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalTitleSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotLeftEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopLeftStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotLeftTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopLeftBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/instructionsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.34" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noAccountTextEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/createAccountButEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signInStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+
+    <TextView
+        android:id="@+id/appTitleTextView"
+        style="@style/appTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/appTitleLabel"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalTitleSpace"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop"
+        app:layout_constraintBottom_toTopOf="@id/appTaglineTextView"/>
+    <TextView
+        android:id="@+id/appTaglineTextView"
+        style="@style/appTagLineStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/appTagLineLabel"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalTitleSpace"
+        app:layout_constraintTop_toBottomOf="@id/appTitleTextView"
+        app:layout_constraintBottom_toTopOf="@id/noAccountTextView"/>
+
+    <TextView
+        android:id="@+id/instructionsTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/instructionsLabel"
+        style="@style/instructionsTextStyle"
+        android:gravity="bottom"
+        android:padding="0dp"
+        app:layout_constraintStart_toStartOf="@id/instructionsStart"
+        app:layout_constraintEnd_toEndOf="@id/stickerTopLeftStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/emailInput"/>
+
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/emailInputHint"
+        android:minHeight="60dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalTitleSpace"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/instructionsTextView"
+        app:layout_constraintBottom_toTopOf="@id/passwordInput"/>
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/passwordInputHint"
+        android:minHeight="60dp"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalTitleSpace"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintBottom_toTopOf="@id/signInButton"/>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signInButtonText"
+        style="@style/signInButton"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="@id/signInStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom"/>
+
+    <TextView
+        android:id="@+id/noAccountTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/noAccountLabelLand"
+        android:minWidth="250dp"
+        style="@style/noAccountTextStyle"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="@id/stickerBotLeftEnd"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintEnd_toEndOf="@id/noAccountTextEnd"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom"/>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/signUpButtonText"
+        style="@style/signUpButton"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@id/noAccountTextView"
+        app:layout_constraintTop_toTopOf="@id/noAccountTextView"
+        app:layout_constraintEnd_toEndOf="@id/createAccountButEnd"
+        app:layout_constraintBottom_toBottomOf="@id/noAccountTextView"/>
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_question_mark"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

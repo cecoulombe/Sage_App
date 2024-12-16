@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/layoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoalTrackerActivity">
+    <ImageView
+        android:id="@+id/stickerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="25"
+        app:layout_constraintTop_toTopOf="@id/stickerBotLeftTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/stickerBotLeftEnd"/>
+    <ImageView
+        android:id="@+id/stickerImage2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="145"
+        android:scaleX="-1"
+        app:layout_constraintStart_toStartOf="@id/stickerTopRightStart"
+        app:layout_constraintEnd_toEndOf="@id/stickerTopRightEnd"
+        app:layout_constraintTop_toTopOf="@id/stickerTopRightTop"
+        app:layout_constraintBottom_toBottomOf="@id/stickerTopRightBottom"/>
+
+    <LinearLayout
+        android:id="@+id/activitySelectionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_home"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+        <Button
+            android:id="@+id/accountManagerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/accountManagerButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/netWorthButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/netWorthButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/goalTrackerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/disabled_activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/goalTrackerButtonText"
+            android:maxLines="2"
+            />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_settings"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_question_mark"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toTopOf="@id/signOutButton"
+        app:layout_constraintBottom_toBottomOf="@id/signOutButton"
+        app:layout_constraintEnd_toStartOf="@id/signOutButton"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/signOutButton"
+        app:backgroundTint="@null"
+        android:text="@string/signOutButton"
+        android:maxLines="2"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/goalNameButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/labelButtonStyle"
+        app:backgroundTint="@null"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop"
+        app:layout_constraintBottom_toBottomOf="@id/nameButtonBottom"/>
+
+<!-- Pie chart to show goal progress-->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toTopOf="@id/graphTop"
+        app:layout_constraintBottom_toBottomOf="@id/graphBottom"/>
+
+    <TextView
+        android:id="@+id/goalAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/labelsStyleGoal"
+        android:text="@string/goalAmountLabel"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/goalAmountButton"
+        app:layout_constraintTop_toTopOf="@id/goalAmountTop"
+        app:layout_constraintBottom_toBottomOf="@id/goalAmountBottom"/>
+
+    <Button
+        android:id="@+id/goalAmountButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/labelButtonStyle"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@id/goalAmountLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toTopOf="@id/goalAmountTop"
+        app:layout_constraintBottom_toBottomOf="@id/goalAmountBottom"/>
+
+    <TextView
+        android:id="@+id/currentAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/labelsStyleGoal"
+        android:text="@string/currentAmountGoalLabel"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toStartOf="@id/currentAmountButton"
+        app:layout_constraintTop_toTopOf="@id/currentAmountTop"
+        app:layout_constraintBottom_toBottomOf="@id/currentAmountBottom"/>
+
+    <Button
+        android:id="@+id/currentAmountButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/labelButtonStyle"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@id/currentAmountLabel"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toTopOf="@id/currentAmountTop"
+        app:layout_constraintBottom_toBottomOf="@id/currentAmountBottom"/>
+
+    <ImageButton
+        android:id="@+id/currencyExchangeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_currency_exchange"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/currencyExchangeDescription"
+        app:layout_constraintTop_toBottomOf="@id/activitySelectionLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotLeftEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotLeftTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/nameButtonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/graphTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/graphBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/goalAmountTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/goalAmountBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/currentAmountTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/currentAmountBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

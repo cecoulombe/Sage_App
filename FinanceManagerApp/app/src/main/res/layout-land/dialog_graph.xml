@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Close button (X) in the top-right corner -->
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_close"
+        style="@style/signOutButton"
+        android:scaleType="fitCenter"
+        android:padding="1dp"
+        android:contentDescription="@string/closeButtonDescription"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
+
+
+    <!--line graph view where we will be displaying our data-->
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        style="@style/graphStyle"
+        android:layout_below="@id/closeButton" />
+
+</RelativeLayout>

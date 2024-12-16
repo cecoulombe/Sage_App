@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/enterAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/createNewAccountInstructions"
+        android:text="@string/enterAccountName"/>
+
+    <EditText
+        android:id="@+id/editAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enterNewNameHint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/enterAccountBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enterAccountBalance"
+        style="@style/createNewAccountInstructions"/>
+
+    <EditText
+        android:id="@+id/editAccountBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/enterNewBalanceHint" />
+</LinearLayout>

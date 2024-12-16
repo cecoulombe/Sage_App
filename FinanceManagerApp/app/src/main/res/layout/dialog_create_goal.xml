@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/enterNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/goalPopupInstructions"
+        android:text="@string/createNewGoalName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/enterNameEditText"/>
+
+    <EditText
+        android:id="@+id/enterNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/goalNameHint"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterNameTextView"
+        app:layout_constraintBottom_toTopOf="@id/enterGoalAmountTextview"/>
+
+    <TextView
+        android:id="@+id/enterGoalAmountTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/createNewGoalAmount"
+        style="@style/goalPopupInstructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterNameEditText"
+        app:layout_constraintBottom_toTopOf="@id/enterAmountEditText"/>
+
+    <EditText
+        android:id="@+id/enterAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/goalAmountHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterGoalAmountTextview"
+        app:layout_constraintBottom_toTopOf="@id/selectAccountTextview"/>
+
+    <TextView
+        android:id="@+id/selectAccountTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selectAccountsGoal"
+        style="@style/goalPopupInstructions"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterAmountEditText"
+        app:layout_constraintBottom_toTopOf="@id/assetAccountsScrollView"/>
+
+    <ScrollView
+        android:id="@+id/assetAccountsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        style="@style/scrollViewStyle"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectAccountTextview"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/accountsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+</androidx.constraintlayout.widget.ConstraintLayout>

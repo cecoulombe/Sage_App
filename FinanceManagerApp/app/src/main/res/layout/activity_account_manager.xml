@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountManagerActivity"
+    style="@style/layoutStyle">
+
+    <ImageView
+        android:id="@+id/stickerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="225"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/stickerBottom"
+        app:layout_constraintStart_toStartOf="@id/deleteAccountEnd"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/activitySelectionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_home"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+        <Button
+            android:id="@+id/accountManagerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/disabled_activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/accountManagerButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/netWorthButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/netWorthButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/goalTrackerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/goalTrackerButtonText"
+            android:maxLines="2"
+            />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_settings"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_question_mark"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toTopOf="@id/signOutButton"
+        app:layout_constraintBottom_toBottomOf="@id/signOutButton"
+        app:layout_constraintEnd_toStartOf="@id/signOutButton"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/signOutButton"
+        app:backgroundTint="@null"
+        android:text="@string/signOutButton"
+        android:maxLines="2"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/createNewAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/createNewAccountButton"
+        app:backgroundTint="@null"
+        android:text="@string/createNewAccountButtonLabel"
+        android:maxLines="2"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/addAccountEnd"
+        app:layout_constraintTop_toTopOf="@id/accountTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom" />
+
+    <Button
+        android:id="@+id/deleteAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/createNewAccountButton"
+        app:backgroundTint="@null"
+        android:text="@string/deleteAccountButton"
+        android:maxLines="2"
+        app:layout_constraintStart_toEndOf="@id/deleteAccountStart"
+        app:layout_constraintEnd_toEndOf="@id/deleteAccountEnd"
+        app:layout_constraintTop_toTopOf="@id/accountTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalRight"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottomOfTable">
+
+        <TableLayout
+            android:id="@+id/accountsTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="1" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/currencyExchangeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_currency_exchange"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/currencyExchangeDescription"
+        app:layout_constraintTop_toBottomOf="@id/activitySelectionLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomOfTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/addAccountEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.31" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/deleteAccountStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.345" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/deleteAccountEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.59" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/accountTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

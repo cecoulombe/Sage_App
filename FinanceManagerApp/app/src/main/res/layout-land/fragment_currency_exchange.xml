@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/layoutStyle"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/currencyExchangeHeader"
+            style="@style/currencyHeader"
+            android:minHeight="50dp"/>
+        <!-- Close button (X) in the top-right corner -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close"
+            style="@style/signOutButton"
+            android:scaleType="fitCenter"
+            android:padding="1dp"
+            android:contentDescription="@string/closeButtonDescription"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currencyExchangeInstructions"
+        style="@style/currencyInfo"/>
+    <!-- Start Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/inputAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="60dp"
+            android:hint="@string/inputHint"
+            android:inputType="numberDecimal" />
+        <!-- Start currency dropdown -->
+        <Spinner
+            android:id="@+id/startCurrencySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:minHeight="60dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- End Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/outputAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="60dp"
+            android:hint="@string/outputHint"
+            android:inputType="numberDecimal" />
+        <!-- End currency dropdown -->
+        <Spinner
+            android:id="@+id/endCurrencySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:minHeight="60dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</LinearLayout>

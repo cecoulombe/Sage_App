@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/selectAccountTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteAccountPopup_Info"
+        style="@style/deleteAccountPopupInstructions"/>
+
+    <ScrollView
+        android:id="@+id/assetAccountsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        style="@style/scrollViewStyle"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:id="@+id/accountsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/confirmDeleteCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteAccountPopup_Confirmation"
+        android:textColor="@color/netNegative"/>
+</LinearLayout>

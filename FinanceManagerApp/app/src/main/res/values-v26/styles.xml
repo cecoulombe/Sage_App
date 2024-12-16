@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="layoutStyle">
+        <item name="android:background">@color/backgroundColor</item>
+    </style>
+    <style name="appTitleStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">40sp</item>
+        <item name="android:autoSizeMaxTextSize">70sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/titleColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="appTagLineStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">20sp</item>
+        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textAccentColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="instructionsTextStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">10sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="noAccountTextStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">7sp</item>
+        <item name="android:autoSizeMaxTextSize">20sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="signInButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="signUpButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="activitySelectionButtonStyle">
+        <item name="android:background">@drawable/activity_selection_buttons
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="signOutButton">
+        <item name="android:background">@drawable/sign_in_button
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="helpButton">
+        <item name="android:background">@drawable/sign_in_button
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+<!--  Account manager activity  -->
+    <style name="createNewAccountButton">
+        <item name="android:background">@drawable/activity_selection_buttons
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">14sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="deleteAccountPopupInstructions">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">18sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+    <!--  Welcome activity  -->
+    <style name="welcomeInstructionsTextStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">10sp</item>
+        <item name="android:autoSizeMaxTextSize">20sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Account Manager activity  -->
+    <style name="tableLayoutStyle">
+        <item name="android:background">@color/tableLayoutBackground</item>
+    </style>
+    <style name="editBalanceButtons">
+        <item name="android:background">@drawable/activity_selection_buttons
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">14sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+    </style>
+    <style name="createNewAccountInstructions">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">17sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Net worth calculator  -->
+    <style name="addAssetButton">
+        <item name="android:background">@drawable/activity_selection_buttons
+        </item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="netWorthDisplay">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">20sp</item>
+        <item name="android:autoSizeMaxTextSize">45sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="labelsStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">15sp</item>
+        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="graphStyle">
+        <item name="android:background">@color/scrollBackgroundColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+<!--  Goal tracker Activity  -->
+    <style name="labelButtonStyle">
+        <item name="android:background">@color/scrollBackgroundColor</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">15sp</item>
+        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+    <style name="labelsStyleGoal">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">15sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+    <style name="goalPopupInstructions">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">18sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Settings Activity  -->
+    <style name="resetButton">
+        <item name="android:background">@drawable/reset_button</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">10sp</item>
+        <item name="android:autoSizeMaxTextSize">50sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="deleteWarningStyle">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">18sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Currency Exchange Fragment  -->
+    <style name="currencyHeader">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">25sp</item>
+        <item name="android:autoSizeMaxTextSize">35sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="currencyInfo">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">15sp</item>
+        <item name="android:autoSizeMaxTextSize">25sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+</resources>

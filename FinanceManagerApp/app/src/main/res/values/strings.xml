@@ -1,0 +1,108 @@
+<resources>
+    <!--  Main Activity  -->
+    <string name="app_name">Sage</string>
+    <string name="appTitleLabel">Sage</string>
+    <string name="appTagLineLabel">Wisdom to manage your finances</string>
+    <string name="instructionsLabel">Enter your email address and password below.</string>
+    <string name="emailInputHint">Email</string>
+    <string name="passwordInputHint">Password</string>
+    <string name="signInButtonText">Sign In</string>
+    <string name="noAccountLabel">No account? \nClick below to create a new account</string>
+    <string name="noAccountLabelLand">No account? \nClick to create a new account</string>
+    <string name="mainActivityHelp_Popup">This application is intended for personal use and information only.\n\nDo not store sensitive information including social security number, banking information, or other personal information.</string>
+    <string name="mainActivityHelp_Disclaimer">Disclaimer</string>
+
+    <!--  Activity SelectionButton Labels  -->
+    <string name="signUpButtonText">Create Account</string>
+    <string name="accountManagerButtonText">Account Manager</string>
+    <string name="netWorthButtonText">Net Worth Calculator</string>
+    <string name="goalTrackerButtonText">Goal Tracker</string>
+    <string name="settingsButtonDescription">Settings</string>
+    <string name="signOutButton">Sign Out</string>
+
+    <!--   Welcome Activity -->
+    <string name="welcomeNicknameLabel">Welcome %1$s\</string>
+    <string name="welcomeInstructions">To navigate through the app, press the corresponding button at the top of the page.</string>
+    <string name="welcomeInstructionsLand">To navigate through the app, press the corresponding button on the left of the page.</string>
+
+    <!--  Account Manager Activity  -->
+    <string name="createNewAccountButtonLabel">Add Account</string>
+    <string name="accountNameHeader">Account Name</string>
+    <string name="accountBalanceHeader">Account Balance</string>
+    <string name="editAccountNameEditTextHint">Enter a new account name</string>
+    <string name="currentAccountNameLabel">Current account name: %1$s\</string>
+    <string name="currentAccountBalanceLabel">Current account balance: %1$s\</string>
+    <string name="enterAmountHint">Enter amount</string>
+    <string name="addButtonLabel">Add</string>
+    <string name="subtractButtonLabel">Subtract</string>
+    <string name="replaceButtonLabel">Replace</string>
+    <string name="cancelButtonLabel">Cancel</string>
+    <string name="name_alertBuilderText">Edit Account Name</string>
+    <string name="balance_alertBuilderText">Edit Account Balance</string>
+    <string name="enterAccountName">Enter new account name below</string>
+    <string name="enterAccountBalance">Enter new account balance below</string>
+    <string name="enterNewNameHint">Account name</string>
+    <string name="enterNewBalanceHint">Account balance</string>
+    <string name="helpButtonDescription">Help</string>
+    <string name="helpPopupTitle">Information</string>
+    <string name="helpPopupInfo_AccountManager">This is the Account Manager.\n\nHere you can add new accounts and modify existing accounts.\n\nTo add a new account, press the "Add Account" button in the bottom left corner. \n***Note that accounts must all have unique names.***\n\nThere are two ways to modify an existing account:\n\t- To modify an account name, tap on the current name and enter the new unique name into the popup.\n\t- To modify the balance of an account, click on the current balance of the desired account and enter a new value. This value can then be added to or subtracted from the existing balance (in case of a deposit or withdrawal) or it can replace the existing data.\n\nThe account data is automatically saved whenever it is updated and when leaving the page, so no need to worry about losing data!</string>
+    <string name="deleteAccountButton">Delete Account</string>
+    <string name="deleteAccountPopup_Info">Select an account to delete:</string>
+    <string name="deleteAccountPopup_Confirmation">By checking this you acknowledge that the account and its information will be permanently deleted.</string>
+
+    <!--  Net Worth Calculator  -->
+    <string name="helpPopupInfo_NetWorth">This is the Net Worth Calculator.\n\nHere you can use your assets and liabilities to estimate your current net worth.\n\nThere are two ways to add an asset or liability:\n\t- A list of accounts from the account manager is visible under both assets and liabilities where existing accounts can be set as either.\n\t- By pressing the "add asset" or "add liability" buttons, you can manually add a new asset/liability. NOTE: these are strictly for net worth calculations and are not saved as accounts. These can be edited in the same way as accounts on the account manager. \n\nTo view a chart with previous net worth calculations, showing your net worth over time, click the chart button. \n\nAll values are saved upon leaving the page.</string>
+    <string name="addAssetButton">Add new asset</string>
+    <string name="addLiabilityButton">Add new liability</string>
+    <string name="deleteAssetButton">Delete asset</string>
+    <string name="deleteLiabilityButton">Delete liability</string>
+    <string name="displayDefault">Net Worth:</string>
+    <string name="netWorthDisplay">Net Worth: %1$s</string>
+    <string name="accountAssetLabel">Select which accounts are assets:</string>
+    <string name="otherAssetsLabel">Additional assets:</string>
+    <string name="accountLiabilitiesLabel">Select which accounts are liabilities:</string>
+    <string name="otherLiabilitiesLabel">Additional liabilities:</string>
+    <string name="nameHeader">Name</string>
+    <string name="balanceHeader">Balance</string>
+    <string name="netWorthGraphTitle">Net Worth Over Time</string>
+    <string name="xAxisLabel">Date</string>
+    <string name="yAxisLabel">Net Worth</string>
+    <string name="closeButtonDescription">Close</string>
+
+    <!--  Goal Tracker Activity  -->
+    <string name="goalAmountLabel">Goal amount:</string>
+    <string name="currentAmountGoalLabel">Current amount:</string>
+    <string name="helpPopupInfo_GoalTracker">This is the Goal Tracker.\n\nYou can view your progress towards your goal and you can edit the goal\'s name, target amount, and how much you have currently saved.\n\nTo edit the name or the target amount, click on the corresponding value and enter the new value in the popup.\n\nTo edit the balance, click on the value. \nHere you can either include or exclude accounts from contributing towards the goal by clicking the box next to the account, or you can add money that is not in an account (i.e. cash).\n\nYou can add, subtract, or replace the current amount that is not in an account.\n\t- Note: this amount will be saved but will NOT affect any accounts that contribute to the goal.\n\nOnce you have completed the goal, you can change all of the values to start a new goal or you can keep the old ones to see what you achieved!</string>
+    <string name="pieChartCenterText">%1$s%</string>
+    <string name="createNewGoalName">Enter a name for the goal below.</string>
+    <string name="createNewGoalAmount">Enter a target amount for the goal below.</string>
+    <string name="selectAccountsGoal">Optional: Select any accounts which contribute to the goal.</string>
+    <string name="goalNameHint">Goal name</string>
+    <string name="goalAmountHint">Target Amount</string>
+    <string name="goalPopupTitle">Create New Goal</string>
+    <string name="currentGoalNameLabel">Current account name: %1$s\</string>
+    <string name="newGoalNameHint">Enter a new name for the goal</string>
+    <string name="editGoalName_title">Edit Goal Name</string>
+    <string name="currentGoalAmountLabel">Current target for the goal: %1$s\</string>
+    <string name="editGoalAmountHint">Enter a new target amount for the goal</string>
+    <string name="editGoalAmount_title">Edit Goal Amount</string>
+    <string name="currentAmountSavedLabel">Current amount saved for the goal: %1$s\ plus amount from accounts: %2$s\ for a total of: %3$s\</string>
+    <string name="editCurrentAmountHint">Enter amount</string>
+    <string name="editCurrentAmount_title">Edit Current Amount</string>
+
+    <!--  Settings Fragment  -->
+    <string name="darkModeTitle">Dark Mode</string>
+    <string name="darkModeSummary">Toggle to enable dark mode with a darker background and lighter text and element colours.</string>
+    <string name="deleteUserButton">Delete User</string>
+    <string name="deleteUserPopup_Warning">This action will permanently delete this user as well as ll of the associated data. This action is unrecoverable.</string>
+    <string name="deleteUserPopup_Confirmation">By checking this you acknowledge that the user and all data will be permanently deleted.</string>
+    <string name="confirmDeletePopup_Title">Confirm Deletion</string>
+
+<!--  Currency Exchange Fragment  -->
+    <string name="inputHint">Enter Amount</string>
+    <string name="outputHint">Enter Amount</string>
+    <string name="currencyExchangeHeader">Currency Exchange Calculator</string>
+    <string name="currencyExchangeInstructions">Click the spinner to select an initial and a target currency. You can edit either or amount and the other will update and show the converted amount.</string>
+    <string name="currencyExchangeDescription">Currency Exchange Calculator</string>
+
+</resources>

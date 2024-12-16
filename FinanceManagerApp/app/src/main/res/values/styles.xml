@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="layoutStyle">
+        <item name="android:background">@color/backgroundColor</item>
+    </style>
+    <style name="appTitleStyle">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/titleColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="appTagLineStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textAccentColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="instructionsTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="noAccountTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="signInButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="signUpButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="activitySelectionButtonStyle">
+        <item name="android:background">@drawable/activity_selection_buttons</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="disabled_activitySelectionButtonStyle">
+        <item name="android:background">@drawable/disabled_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="signOutButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="helpButton">
+        <item name="android:background">@drawable/sign_in_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+
+<!--  Welcome activity  -->
+    <style name="welcomeInstructionsTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Account manager activity  -->
+    <style name="createNewAccountButton">
+        <item name="android:background">@drawable/activity_selection_buttons</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="editBalanceButtons">
+        <item name="android:background">@drawable/activity_selection_buttons</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="createNewAccountInstructions">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="deleteAccountPopupInstructions">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Net worth calculator  -->
+    <style name="addAssetButton">
+        <item name="android:background">@drawable/activity_selection_buttons</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="netWorthDisplay">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="labelsStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="scrollViewStyle">
+        <item name="android:background">@color/scrollBackgroundColor</item>
+    </style>
+    <style name="graphStyle">
+        <item name="android:background">@color/scrollBackgroundColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+<!--  Goal Tracker Activity  -->
+    <style name="labelButtonStyle">
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+    <style name="goalPopupInstructions">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Settings Activity  -->
+    <style name="resetButton">
+        <item name="android:background">@drawable/reset_button</item> <!-- Ensure this drawable exists -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="deleteWarningStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+
+<!--  Currency Exchange Fragment  -->
+    <style name="currencyHeader">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+    <style name="currencyInfo">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item> <!-- Ensure this color exists -->
+    </style>
+</resources>

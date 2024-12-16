@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/layoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <ImageView
+        android:id="@+id/stickerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="315"
+        android:translationY="0dp"
+        android:translationX="0dp"
+        app:layout_constraintTop_toTopOf="@id/stickerBotRightTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/stickerBotRightStart"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <ImageView
+        android:id="@+id/stickerImage2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sage_logo_no_background"
+        android:contentDescription="Sticker"
+        android:rotation="225"
+        android:translationY="-25dp"
+        android:translationX="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/stickerTopRightBottom"
+        app:layout_constraintStart_toStartOf="@id/stickerTopRightStart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/activitySelectionLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:maxWidth="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_home"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+        <Button
+            android:id="@+id/accountManagerButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/accountManagerButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/netWorthButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/netWorthButtonText"
+            android:maxLines="2"
+            />
+        <Button
+            android:id="@+id/goalTrackerButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:text="@string/goalTrackerButtonText"
+            android:maxLines="2"
+            />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            style="@style/disabled_activitySelectionButtonStyle"
+            app:backgroundTint="@null"
+            android:maxLines="2"
+            android:contentDescription="@string/settingsButtonDescription"
+            android:src="@drawable/ic_settings"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/settings_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottomOfTable"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalRight"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalLeft"/>
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/helpButton"
+        app:backgroundTint="@null"
+        android:src="@drawable/ic_question_mark"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:maxLines="2"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/helpButtonDescription"
+        app:layout_constraintTop_toTopOf="@id/signOutButton"
+        app:layout_constraintBottom_toBottomOf="@id/signOutButton"
+        app:layout_constraintEnd_toStartOf="@id/signOutButton"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/signOutButton"
+        app:backgroundTint="@null"
+        android:text="@string/signOutButton"
+        android:maxLines="2"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <Button
+        android:id="@+id/deleteUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="120dp"
+        android:layout_weight="1"
+        style="@style/resetButton"
+        app:backgroundTint="@null"
+        android:text="@string/deleteUserButton"
+        android:maxLines="2"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalLeft"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom" />
+
+
+    <!--  Guidelines for constraints  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomOfTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotRightStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerTopRightBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stickerBotRightTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

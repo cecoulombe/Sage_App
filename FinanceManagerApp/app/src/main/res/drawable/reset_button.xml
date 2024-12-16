@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80000000" /> <!-- Shadow color, semi-transparent black -->
+        </shape>
+    </item>
+
+    <!-- State when pressed -->
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Gradient for pressed state -->
+            <gradient
+                android:startColor="#4E2121"
+                android:endColor="#1D0D0D"
+                android:angle="270" />
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp" />
+        </shape>
+    </item>
+
+    <!-- State when focused/hovered -->
+    <item android:state_focused="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Gradient for focused state -->
+            <gradient
+                android:startColor="#A23A3A"
+                android:endColor="#3E1A1A"
+                android:angle="270" />
+            <corners android:radius="5dp" />
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp" />
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Gradient for default state -->
+            <gradient
+                android:startColor="#A23A3A"
+                android:endColor="#3E1A1A"
+                android:angle="270" />
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp" />
+        </shape>
+    </item>
+</layer-list>

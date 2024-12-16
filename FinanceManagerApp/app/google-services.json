@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "444875443395",
+    "project_id": "financial-management-app-e7b8d",
+    "storage_bucket": "financial-management-app-e7b8d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444875443395:android:851b40934923b083656676",
+        "android_client_info": {
+          "package_name": "com.example.financemanagerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2FfsjrnvqgO_4yGfMkOtcBKyx9WmjxHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

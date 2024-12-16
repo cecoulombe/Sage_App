@@ -12,6 +12,7 @@ For the full app report including code review, features, and product specificati
 - [Technology Used](#Technology-Used)
 - [TODO List](#To-Do-List-for-App)
 - [Version History](#Version-History)
+- [Disclaimer](#Disclaimer)
 
 ## Download the APK
 
@@ -75,3 +76,8 @@ There are numerous features of Sage that are worth mentioning:
 ## Version History
 
 - **v1.0**: Initial publication of the completed application to GitHub. App not yet available on Google Play Store due to closed testing limitations (not enough testers and no Android devices).
+
+## Disclaimer
+All media used within the application and promotional materials (trailer videos) are free to use or created by myself.
+- All art, logos, and other visual media are created by myself.
+- Music in trailers is royalty-free music.

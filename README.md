@@ -11,6 +11,11 @@ This README file is specifically for the Sage application. Below are instruction
 
 ## Download the APK
 
+You can  downlaod the APK from:
+- **GitHub Releases**: [latest release](https://github.com/cecoulombe/Sage_App/releases)
+OR
+- Directly from this repository: Navigate to the [`apk/`](./apk/) folder and download the `sage_app.apk` file.
+
 ## Running the App
 
 ## Features

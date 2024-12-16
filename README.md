@@ -2,7 +2,7 @@
 
 This README file is specifically for the Sage application. Below are instructions on how to run and test the app on an emulator or Android device as well as some of the app's features.
 
-For the full app report including code review, features, and product specification sheet, read th `Sage_Product_Report.pdf` file.
+For the full app report including code review, features, and product specification sheet, read the `Sage_Product_Report.pdf` file.
 
 ## Contents
 - [Download the APK](#Download-the-APK)
@@ -15,12 +15,13 @@ For the full app report including code review, features, and product specificati
 
 ## Download the APK
 
-You can  downlaod the APK from:
+You can  download the APK from:
 - **GitHub Releases**: [latest release](https://github.com/cecoulombe/Sage_App/releases)
 OR
 - Directly from this repository: Navigate to the [`apk/`](./apk/) folder and download the `sage_app.apk` file.
 
 ## Running the App
+Below are the instructions for running the app on an Android emulator or physical device. Choose the method that works best for you.
 
 ### 1. On an Emulator
 1. Download and install **Android Studio**: [Android Studio Download](https://developer.android.com/studio).
@@ -42,10 +43,12 @@ OR
 Watch the app in action here:
 
 If on desktop:
+
 [![App Trailer - Best for Desktop viewing](https://img.youtube.com/vi/xRc2w368BJk/0.jpg)](https://youtu.be/xRc2w368BJk)
 
 
 If on mobile device (it is best if you lock your rotation and watch the video in landscape):
+
 [![App Trailer - Best for Mobile viewing](https://img.youtube.com/vi/I-oB61kQq0U/0.jpg)](https://youtu.be/I-oB61kQq0U)
 
 ## Features
@@ -53,9 +56,9 @@ If on mobile device (it is best if you lock your rotation and watch the video in
 For a full list of features, see the `Sage_Product_Report.pdf` file.
 
 There are numerous features of Sage that are worth mentioning:
-- Google FireBase sign on and data storage
+- Google Firebase sign on and data storage
 - Calming and comfortable environment
-- Reactive user interface and immediate data sync with FireBase
+- Reactive user interface and immediate data sync with Firebase
 - Graphs to highlight financial wellbeing and goal progress
 - Currency exchange calculator with up-to-date exchange rates
 
@@ -66,8 +69,8 @@ There are numerous features of Sage that are worth mentioning:
 
 ## To-Do List for App
 
-- [ ] Publish the application to the Google Play Store.
-  - [ ] Closed testing
+- [ ] Publish the application to the Google Play Store.  
+    - App is currently in closed testing due to limited access to testers and physical Android devices.
 
 ## Version History
 

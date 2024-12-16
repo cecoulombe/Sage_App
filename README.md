@@ -7,6 +7,7 @@ For the full app report including code review, features, and product specificati
 ## Contents
 - [Download the APK](#Download-the-APK)
 - [Running the App](#Running-the-App)
+- [App Trailer](#App-Trailer)
 - [Features](#Features)
 - [Technology Used](#Technology-Used)
 - [TODO List](#To-Do-List-for-App)
@@ -36,6 +37,13 @@ OR
 4. Open the APK file on your device and allow the installation.
 5. Launch the app from your app drawer.
 
+## App Trailer
+
+Watch the app in action here:
+
+[![App Trailer - Best for Desktop viewing](https://img.youtube.com/vi/xRc2w368BJk/0.jpg)](https://youtu.be/xRc2w368BJk)
+
+https://youtu.be/xRc2w368BJk
 ## Features
 
 For a full list of features, see the `Sage_Product_Report.pdf` file.

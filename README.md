@@ -1,15 +1,19 @@
 # Sage: Wisdom to Manage your Financials
 
-This README file is specifically for the Sage application.
+This README file is specifically for the Sage application. Below are instructions on how to run and test the app on an emulator or Android device as well as some of the app's features.
 
 ## Contents
-- [Access Instructions](#Access-Instructions)
+- [Download the APK](#Download-the-APK)
+- [Running the App](#Running-the-App)
+- [Features](#Features)
 - [TODO List](#To-Do-List-for-App)
 - [Version History](#Version-History)
 
-## Access Instructions
-The most up-to-date version of the Finance Tracker website is available [here](https://cecoulombe.github.io/FinanceTracker/)
-- https://cecoulombe.github.io/FinanceTracker/
+## Download the APK
+
+## Running the App
+
+## Features
 
 ## To-Do List for App
 

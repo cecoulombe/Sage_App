@@ -41,9 +41,13 @@ OR
 
 Watch the app in action here:
 
+If on desktop:
 [![App Trailer - Best for Desktop viewing](https://img.youtube.com/vi/xRc2w368BJk/0.jpg)](https://youtu.be/xRc2w368BJk)
 
-https://youtu.be/xRc2w368BJk
+
+If on mobile device (it is best if you lock your rotation and watch the video in landscape):
+[![App Trailer - Best for Mobile viewing](https://img.youtube.com/vi/I-oB61kQq0U/0.jpg)](https://youtu.be/I-oB61kQq0U)
+
 ## Features
 
 For a full list of features, see the `Sage_Product_Report.pdf` file.

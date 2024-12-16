@@ -54,8 +54,8 @@ There are numerous features of Sage that are worth mentioning:
 
 ## To-Do List for App
 
-- [] Publish the application to the Google Play Store.
-  - [] Closed testing
+- [ ] Publish the application to the Google Play Store.
+  - [ ] Closed testing
 
 ## Version History
 
